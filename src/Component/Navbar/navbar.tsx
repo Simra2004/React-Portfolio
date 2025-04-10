@@ -1,23 +1,26 @@
-import React from "react";
-import { AppBar, Toolbar, Typography, Button,Box,Card } from "@mui/material";
-import "./Navbar.css";
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
-function Navbar() {
+const navItems = ['Introduction', 'Work', 'Experience', 'Education', 'Projects', 'Contact Me'];
+
+const Navbar = () => {
   return (
-    <AppBar position="static" className="navbar">
-      <Toolbar>
-        <Typography variant="h6" className="nav-title">
-          Simra's Portfolio
-        </Typography>   
-        <Box sx={{display:"flex", justifyContent:"space-between"}}>
-          <Button sx={ {marginLeft:70, color:"inherit"}}>Work</Button>
-          <Button color="inherit">Education</Button>
-          <Button color="inherit">Experience</Button>
-          <Button color="inherit">Projects</Button>
+    <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 10, width:'100%' }}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Typography variant="h6" sx={{ fontWeight: 'bold', color:'black' }}>
+        [Simra's Portfolio]
+        </Typography>
+        <Box sx={{ display: 'flex', gap: 3 }}>
+          {navItems.map((item) => (
+            <Button key={item} sx={{ color: 'black', fontWeight: '300', textTransform: 'none', }}>
+              {item}
+            </Button>
+          ))}
         </Box>
       </Toolbar>
     </AppBar>
   );
-}
+};
 
 export default Navbar;
+
