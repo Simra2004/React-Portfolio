@@ -1,18 +1,37 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 
-const navItems = ['Introduction', 'Work', 'Experience', 'Education', 'Projects', 'Contact Me'];
+const navItems = [
+  "Introduction",
+  "Work",
+  "Experience",
+  "Education",
+  "Contactme"
+];
 
 const Navbar = () => {
+  const handleScroll = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 10, width:'100%' }}>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <Typography variant="h6" sx={{ fontWeight: 'bold', color:'black' }}>
-        [Simra's Portfolio]
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "white", boxShadow: 10, width: "100%" }}
+    >
+      <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+          [Simra's Portfolio]
         </Typography>
-        <Box sx={{ display: 'flex', gap: 3 }}>
+        <Box sx={{ display: "flex", gap: 3 }}>
           {navItems.map((item) => (
-            <Button key={item} sx={{ color: 'black', fontWeight: '300', textTransform: 'none', }}>
+            <Button
+              key={item}
+              sx={{ color: "black", fontWeight: "300", textTransform: "none" }}
+              onClick={() => handleScroll(item)}
+            >
               {item}
             </Button>
           ))}
@@ -23,4 +42,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

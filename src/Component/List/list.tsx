@@ -24,9 +24,7 @@ export default function AlignItemsList() {
               <Typography
                 component="span"
                 variant="body2"
-                sx={{ color: 'text.primary', display: 'inline' , marginleft:
-
-                }}
+                sx={{ color: 'text.primary', display: 'inline' , marginleft:10}}
               >
                 2022-current
               </Typography>
