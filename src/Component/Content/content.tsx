@@ -53,9 +53,9 @@ function Content() {
           <Button
             variant="contained"
             color="primary"
-            // href="#contact"
-            // id="Contactme"
-            sx={{ mr: 2 }} >
+            href="#contact"
+            id="Contactme"
+            sx={{ mr: 2 , padding: 2}} >
             {" "}
             CONTACT ME
           </Button>
@@ -64,6 +64,8 @@ function Content() {
             color="secondary"
             href="your-resume-link.pdf"
             target="_blank"
+            sx={{padding: 1}}
+            
           > DOWNLOAD RESUME
           </Button>
         </div>
