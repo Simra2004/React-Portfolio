@@ -9,7 +9,7 @@ import About from "../Aboutme/aboutme";
 function Content() {
   return (
     <Container className="content">
-      <div className="" id="Introduction">
+      <div id="Introduction">
         <Typography
           marginRight={70}
           marginTop={2}
@@ -53,10 +53,10 @@ function Content() {
           <Button
             variant="contained"
             color="primary"
-            href="mailto:simrafaisal103@gmail.com"
-            target="_blank"
-            sx={{ mr: 2 }}
-          >
+            // href="#contact"
+            // id="Contactme"
+            sx={{ mr: 2 }} >
+            {" "}
             CONTACT ME
           </Button>
           <Button
@@ -64,30 +64,40 @@ function Content() {
             color="secondary"
             href="your-resume-link.pdf"
             target="_blank"
-          >
-            DOWNLOAD RESUME
+          > DOWNLOAD RESUME
           </Button>
         </div>
       </div>
       <div id="Work">
-      <Typography marginRight={0} marginTop={2} variant="h4" className="title">
-        {" "}
-        WORK
-      </Typography>
-      <Box sx={{ display: "flex", justifyContent: "space-between", marginTop:2 }}>
-        <Card />
-        <Card />
-        <Card />
-      </Box>
+        <Typography
+          marginRight={0}
+          marginTop={2}
+          variant="h4"
+          className="title"
+        >
+          {" "}
+          WORK
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 2,
+          }}
+        >
+          <Card />
+          <Card />
+          <Card />
+        </Box>
       </div>
-      
+
       <div className="buttons">
         <Button
           variant="contained"
           color="primary"
           href="https://www.linkedin.com/in/socialmediastrategy/"
           target="_blank"
-          sx={{ mr: 2 ,marginTop:"2"}}
+          sx={{ mr: 2, marginTop: "2" }}
         >
           LinkedIn
         </Button>
@@ -96,43 +106,60 @@ function Content() {
           color="secondary"
           href="https://github.com/Simra2004"
           target="_blank"
-          sx={{ mr: 2 ,marginTop: 2, marginBottom:2}}
+          sx={{ mr: 2, marginTop: 2, marginBottom: 2 }}
         >
           GitHub
         </Button>
       </div>
-      <div  id="Experience">
-      <Typography variant="h4" className="title"  marginTop={2}>
-        EXPERIENCE
-      </Typography>
-      <Typography variant="h6" className="description" marginTop={2}>
-        <Box sx={{ display: "flex", justifyContent: "space-between", marginTop:2 }}>
-          <Experience />
-          <Experience />
-          <Experience />
-        </Box>
-      </Typography>
+      <div id="Experience">
+        <Typography variant="h4" className="title" marginTop={2}>
+          EXPERIENCE
+        </Typography>
+        <Typography variant="h6" className="description" marginTop={2}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: 2,
+            }}
+          >
+            <Experience />
+            <Experience />
+            <Experience />
+          </Box>
+        </Typography>
       </div>
       <div id="Education">
-      <Typography variant="h4" className="title" marginTop={2} marginBottom={2}>
-        EDUCATION
-      </Typography>
-      <Typography variant="h6" className="description" marginTop={2} marginBottom={2}>
-        <Box sx={{ marginTop:2}}>
-          <List />
-        </Box>
-      </Typography>
+        <Typography
+          variant="h4"
+          className="title"
+          marginTop={2}
+          marginBottom={2}
+        >
+          EDUCATION
+        </Typography>
+        <Typography
+          variant="h6"
+          className="description"
+          marginTop={2}
+          marginBottom={2}
+        >
+          <Box sx={{ marginTop: 2 }}>
+            <List />
+          </Box>
+        </Typography>
       </div>
+      {/* <section id="contact"> */}
       <div id="Contactme">
-      <Typography variant="h4" className="title" marginTop={2}>
-        CONTACT ME
-      </Typography>
-      <Typography variant="h6" className="description" marginTop={2}>
-        <About />
-      </Typography>
+        <Typography variant="h4" className="title" marginTop={2}>
+          CONTACT ME
+        </Typography>
+        <Typography variant="h6" className="description" marginTop={2}>
+          <About />
+        </Typography>
       </div>
+      {/* </section> */}
     </Container>
   );
 }
-
 export default Content;
