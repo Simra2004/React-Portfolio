@@ -18,9 +18,15 @@ const Navbar = () => {
 
   return (
     <AppBar
-      position="static"
-      sx={{ backgroundColor: "white", boxShadow: 10, width: "100%" }}
-    >
+    position="sticky"
+    sx={{
+      backgroundColor: "white",
+      boxShadow: 10,
+      width: "100%",
+      zIndex: (theme) => theme.zIndex.drawer + 1, 
+    }}
+  >
+  
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
           [Simra's Portfolio]
