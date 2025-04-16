@@ -14,6 +14,7 @@ function Content() {
           marginRight={70}
           marginTop={2}
           variant="h4"
+          fontWeight={"bold"}
           className="title"
         >
           {" "}
@@ -27,7 +28,7 @@ function Content() {
             marginTop: 2,
           }}
         >
-          <Typography marginRight={20} variant="h6" className="description">
+          <Typography marginRight={20} color="white" fontWeight={600} variant="h6" className="description">
             SIMRA FAISAL Currently enrolled in BSCS and pursuing it. Having 6
             months of experience with semester projects on various frontend and
             backend technologies, meanwhile working at OnePercent Labs as
@@ -48,14 +49,15 @@ function Content() {
         </Box>
         <div
           className="buttons"
-          style={{ display: "flex", justifyContent: "flex-start" }}
+          style={{ display: "flex", justifyContent: "flex-start", }}
         >
           <Button
             variant="contained"
             color="primary"
             href="#contact"
             id="Contactme"
-            sx={{ mr: 2 , padding: 2}} >
+            sx={{ mr:2 , ml:20, padding: 2  }}
+          >
             {" "}
             CONTACT ME
           </Button>
@@ -64,9 +66,10 @@ function Content() {
             color="secondary"
             href="your-resume-link.pdf"
             target="_blank"
-            sx={{padding: 1}}
-            
-          > DOWNLOAD RESUME
+            sx={{ padding: 1 }}
+          >
+            {" "}
+            DOWNLOAD RESUME
           </Button>
         </div>
       </div>
@@ -74,6 +77,7 @@ function Content() {
         <Typography
           marginRight={0}
           marginTop={2}
+          fontWeight={"bold"}
           variant="h4"
           className="title"
         >
@@ -92,7 +96,6 @@ function Content() {
           <Card />
         </Box>
       </div>
-
       <div className="buttons">
         <Button
           variant="contained"
@@ -114,15 +117,22 @@ function Content() {
         </Button>
       </div>
       <div id="Experience">
-        <Typography variant="h4" className="title" marginTop={2}>
+        <Typography
+          variant="h4"
+          className="title"
+          marginTop={2}
+          fontWeight={"bold"}
+        >
           EXPERIENCE
         </Typography>
-        <Typography variant="h6" className="description" marginTop={2}>
+        <Typography variant="h6" className="description" marginTop={2} fontWeight={600}>
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               marginTop: 2,
+              fontWeight:600
+              
             }}
           >
             <Experience />
@@ -137,6 +147,7 @@ function Content() {
           className="title"
           marginTop={2}
           marginBottom={2}
+          fontWeight={"bold"}
         >
           EDUCATION
         </Typography>
@@ -145,6 +156,7 @@ function Content() {
           className="description"
           marginTop={2}
           marginBottom={2}
+          fontWeight={600}
         >
           <Box sx={{ marginTop: 2 }}>
             <List />
@@ -153,10 +165,15 @@ function Content() {
       </div>
       {/* <section id="contact"> */}
       <div id="Contactme">
-        <Typography variant="h4" className="title" marginTop={2}>
+        <Typography
+          variant="h4"
+          className="title"
+          marginTop={2}
+          fontWeight={"bold"}
+        >
           CONTACT ME
         </Typography>
-        <Typography variant="h6" className="description" marginTop={2}>
+        <Typography variant="h6" className="description" marginTop={2} fontWeight={600}>
           <About />
         </Typography>
       </div>

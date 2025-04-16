@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Box } from "@mui/material";
 import "./App.css";
 import Content from "./Component/Content/content";
