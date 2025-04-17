@@ -28,31 +28,49 @@ function Content() {
             marginTop: 2,
           }}
         >
-          <Typography  color="white" marginRight={20} fontWeight={600} fontSize={20} variant="h5" className="description">
-          👋 Hi, I’m Simra Faisal  I'm a passionate Software Developer currently pursuing a Bachelor's in Computer  and information Science.
-            I have hands-on experience with both frontend and backend technologies through various academic
-            and professional projects. My strengths lie in building responsive, performance-optimized websites 
-            using modern stacks like React and JavaScript.
-            I enjoy solving real-world problems through clean code, and I thrive in environments where creativity,
-            collaboration, and precision are key.
+          <Typography
+            color="white"
+            marginRight={20}
+            fontWeight={600}
+            fontSize={20}
+            variant="h5"
+            className="description"
+          >
+            👋 Hi, I’m Simra Faisal I'm a passionate Software Developer
+            currently pursuing a Bachelor's in Computer and information Science.
+            I have hands-on experience with both frontend and backend
+            technologies through various academic and professional projects. My
+            strengths lie in building responsive, performance-optimized websites
+            using modern stacks like React and JavaScript. I enjoy solving
+            real-world problems through clean code, and I thrive in environments
+            where creativity, collaboration, and precision are key.
           </Typography>
 
           <img
             src="https://static.vecteezy.com/system/resources/previews/016/746/979/non_2x/freelancer-software-developer-programmer-coder-illustrator-vector.jpg"
             alt="Freelancer Illustration"
-            style={{ width: "400px", height: "auto", borderRadius: "10px",boxShadow: "0px 4px 20px rgba(0,0,0,0.5)", }}
+            style={{
+              width: "400px",
+              height: "auto",
+              borderRadius: "10px",
+              boxShadow: "0px 4px 20px rgba(0,0,0,0.5)",
+            }}
           />
         </Box>
         <div
           className="buttons"
-          style={{ display: "flex", justifyContent: "flex-start",marginTop:-8 }}
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            marginTop: -8,
+          }}
         >
           <Button
             variant="contained"
             color="primary"
             href="#contact"
             id="Contactme"
-            sx={{ mr:2 , ml:17, padding: 2  }}
+            sx={{ mr: 2, ml: 17, padding: 2 }}
           >
             {" "}
             CONTACT ME
@@ -85,6 +103,7 @@ function Content() {
             display: "flex",
             justifyContent: "space-between",
             marginTop: 2,
+            marginBottom: 5,
           }}
         >
           <Card />
@@ -116,20 +135,24 @@ function Content() {
         <Typography
           variant="h4"
           className="title"
-          marginTop={2}
+          marginTop={5}
+          marginBottom={5}
           fontWeight={"bold"}
         >
           EXPERIENCE
         </Typography>
-        <Typography variant="h6" className="description" marginTop={2} fontWeight={600}>
+        <Typography
+          variant="h6"
+          className="description"
+          marginTop={2}
+          fontWeight={600}
+        >
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               marginTop: 2,
-              fontWeight:600,
-              
-              
+              fontWeight: 600,
             }}
           >
             <Experience />
@@ -142,10 +165,9 @@ function Content() {
         <Typography
           variant="h4"
           className="title"
-          marginTop={2}
-          marginBottom={2}
+          marginTop={6}
+          marginBottom={6}
           fontWeight={"bold"}
-        
         >
           EDUCATION
         </Typography>
@@ -156,7 +178,7 @@ function Content() {
           marginBottom={2}
           fontWeight={600}
         >
-          <Box sx={{ marginTop: 3,  marginLeft:10 }}>
+          <Box sx={{ marginTop: 3, marginLeft: 10 }}>
             <List />
           </Box>
         </Typography>
@@ -166,12 +188,18 @@ function Content() {
         <Typography
           variant="h4"
           className="title"
-          marginTop={1}
+          marginTop={10}
+          marginBottom={5}
           fontWeight={"bold"}
         >
           CONTACT ME
         </Typography>
-        <Typography variant="h6" className="description" marginTop={2} fontWeight={600}>
+        <Typography
+          variant="h6"
+          className="description"
+          marginTop={2}
+          fontWeight={600}
+        >
           <About />
         </Typography>
       </div>
