@@ -6,6 +6,76 @@ import Card from "../Card/card";
 import Experience from "../Experience/experience";
 import About from "../Aboutme/aboutme";
 
+  const WorkProjects = [
+    {
+      title: "To-Do List",
+      description: `TO DO LIST built with HTML, CSS, and React.js.
+  - Add, delete, and mark tasks as completed ✅
+  - Interactive UI with real-time task updates
+  - Component-based structure for clean and maintainable code`,
+      // image: "https://raw.githubusercontent.com/Simra2004/todolist-react/main/public/screenshot.png"
+    },
+    {
+      title: "Google Homepage Clone",
+      description: `A clean and responsive replica of the Google homepage built using React, Vite, and CSS.
+  - Mimics original layout and styling
+  - Fully responsive design
+  - Practiced component-based architecture`,
+      // image: "https://raw.githubusercontent.com/Simra2004/Google-homepage-using-react/main/public/google-clone.png"
+
+    },
+    {
+      title: "Tic-Tac-Toe Game",
+      description: `A classic Tic-Tac-Toe game built with React.js.
+  - Two-player mode with alternating turns
+  - Win/draw detection and game reset
+  - Styled using CSS for a smooth UI`,
+  // image: "https://raw.githubusercontent.com/Simra2004/TicTacToe-react/main/public/tictactoe.png"
+
+    },
+    {
+      title: "Expense Tracker",
+    description: `An intuitive Expense Tracker built using React.js.
+- Add, view, and categorize expenses 💸
+- Visual summary of total balance, income, and expenses
+- State managed using React hooks`,
+// image: "https://raw.githubusercontent.com/Simra2004/expense-tracker/main/public/expense-tracker.png"
+},
+    {
+      title: "Book Genre Prediction",
+      description: `A machine learning project that predicts book genres based on textual data.
+  - Utilized Python with scikit-learn and pandas
+  - Implemented models like Naive Bayes and Logistic Regression
+  - Achieved accurate predictions with proper preprocessing and EDA`,
+  // image: "https://raw.githubusercontent.com/Simra2004/BOOK-GENRE-PREDICTION/main/public/book-genre.png"
+    },
+    {
+      title: "Movie Recommendation System",
+      description: `A content-based movie recommendation system using Python.
+    - Utilized TF-IDF Vectorizer to compute content similarity 🎬
+    - Recommends movies based on plot and genre
+    - Implemented using pandas, scikit-learn, and streamlit for UI`,
+    // image: "https://example.com/movie-recommendation-thumbnail.jpg"
+  },
+    {
+      title: "Laboratory Automation System",
+      description: `A web-based lab management system built with Python and Streamlit.
+    - Handles patient data, test entries, and result generation
+    - User-friendly UI to automate lab operations efficiently 🧪
+    - Utilized pandas for data handling and Streamlit for interactive UI`,
+      // image: "https://raw.githubusercontent.com/Hania-k11/LaboratorySystem/main/Assets/lab_app_screenshot.png"
+    },
+    {
+      title: "E-commerce Website UI",
+      description: `A responsive front-end e-commerce website built using HTML, CSS, Bootstrap, and JavaScript.
+    - Features home, product, blog, and cart pages 🛒
+    - Fully responsive layout with Bootstrap grid
+    - Dynamic interactions using JavaScript (e.g., add to cart, toggle menu)`,
+    // image: "https://raw.githubusercontent.com/Simra2004/E-commerce-website-using-html-css-bootstrap-and-javascript/main/images/hero4.png"
+  }
+    
+  ];
+  
 function Content() {
   return (
     <Container className="content">
@@ -102,13 +172,19 @@ function Content() {
           sx={{
             display: "flex",
             justifyContent: "space-between",
+            flexWrap:"wrap",
             marginTop: 2,
             marginBottom: 5,
           }}
         >
-          <Card />
-          <Card />
-          <Card />
+{WorkProjects.map((project, index) => (
+  <Card
+    key={index}
+    title={project.title}
+    description={project.description}
+    // image={project.image}
+  />
+))}
         </Box>
       </div>
       <div className="buttons">
@@ -156,8 +232,7 @@ function Content() {
             }}
           >
             <Experience />
-            <Experience />
-            <Experience />
+         
           </Box>
         </Typography>
       </div>

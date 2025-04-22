@@ -23,7 +23,7 @@ const Navbar = () => {
       backgroundColor: "white",
       boxShadow: 10,
       width: "100%",
-      zIndex: (theme) => theme.zIndex.drawer + 1, 
+      // zIndex: (theme) => theme.zIndex.drawer + 1, 
     }}
   >
   
