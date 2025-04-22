@@ -157,8 +157,6 @@ function ExperienceCard({ experience }: { experience: Experience }) {
     </Card>
   );
 }
-
-// Main exported component
 export default function ExperienceCardsList() {
   return (
     <Box sx={{ flexGrow: 1, p: 2 }}>

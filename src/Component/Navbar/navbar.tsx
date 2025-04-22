@@ -19,23 +19,26 @@ const Navbar = () => {
   return (
     <AppBar
     position="sticky"
+   
     sx={{
-      backgroundColor: "white",
-      boxShadow: 10,
+      backgroundColor: "black",
+      boxShadow: 30,
       width: "100%",
-      // zIndex: (theme) => theme.zIndex.drawer + 1, 
+      borderRadius:3
+      
+     
     }}
   >
   
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "black" }}>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "white" }}>
           [Simra's Portfolio]
         </Typography>
         <Box sx={{ display: "flex", gap: 3 }}>
           {navItems.map((item) => (
             <Button
               key={item}
-              sx={{ color: "black", fontWeight: "300", textTransform: "none" }}
+              sx={{ color: "white", fontWeight: "300", textTransform: "none" }}
               onClick={() => handleScroll(item)}
             >
               {item}
