@@ -7,7 +7,6 @@ const navItems = [
   "Education",
   "Contactme"
 ];
-
 const Navbar = () => {
   const handleScroll = (section: string) => {
     const element = document.getElementById(section);
@@ -15,7 +14,6 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
   return (
     <AppBar
     position="sticky"
@@ -24,12 +22,9 @@ const Navbar = () => {
       backgroundColor: "black",
       boxShadow: 30,
       width: "100%",
-      borderRadius:3
-      
-     
+      borderRadius:3 
     }}
   >
-  
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Typography variant="h6" sx={{ fontWeight: "bold", color: "white" }}>
           [Simra's Portfolio]

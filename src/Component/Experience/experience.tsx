@@ -1,9 +1,8 @@
-import * as React from 'react';
+// import * as React from 'react';
 import {
   Card,
   CardHeader,
   CardContent,
-  CardActions,
   Avatar,
   IconButton,
   Typography,
@@ -11,9 +10,9 @@ import {
   Box,
 } from '@mui/material';
 import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
+// import ShareIcon from '@mui/icons-material/Share';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 // Experience type
@@ -28,7 +27,7 @@ interface Experience {
   results?: string[];
 }
 
-// Sample experience data
+
 const Experiences: Experience[] = [
   {
     title: "Associate Software Engineer",
@@ -87,76 +86,72 @@ const Experiences: Experience[] = [
 
 // Individual card component
 function ExperienceCard({ experience }: { experience: Experience }) {
-  const [expanded, setExpanded] = React.useState(false);
-
   return (
-    <Card sx={{ maxWidth: 345, width: '100%' }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        bgcolor: "#1e1e1e",
+        color: "white",
+        borderRadius: 3,
+        boxShadow: 5,
+        p: 1,
+      }}
+    >
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }}>
             {experience.title.charAt(0)}
           </Avatar>
         }
-        action={
-          <IconButton>
-            <MoreVertIcon />
-          </IconButton>
+        action={<IconButton><MoreVertIcon sx={{ color: "white" }} /></IconButton>}
+        title={
+          <Typography sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+            {experience.title}
+          </Typography>
         }
-        title={experience.title}
-        subheader={`${experience.company} | ${experience.duration}`}
+        subheader={
+          <Typography sx={{ color: "gray", fontSize: "0.875rem" }}>
+            {experience.company} | {experience.duration}
+          </Typography>
+        }
       />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
+
+      <CardContent sx={{ textAlign: "left", flexGrow: 1 }}>
+        <Typography variant="body2" sx={{ color: "lightgray", mb: 1 }}>
           <strong>Location:</strong> {experience.location}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" sx={{ color: "lightgray", mb: 1 }}>
           <strong>Description:</strong> {experience.description}
         </Typography>
         {experience.skills && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" sx={{ color: "lightgray", mb: 1 }}>
             <strong>Skills:</strong> {experience.skills}
           </Typography>
         )}
         {experience.contact && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" sx={{ color: "lightgray" }}>
             <strong>Contact:</strong> {experience.contact}
           </Typography>
         )}
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton>
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton>
-          <ShareIcon />
-        </IconButton>
-        <IconButton
-          onClick={() => setExpanded(!expanded)}
-          aria-expanded={expanded}
-          aria-label="show more"
-          sx={{ marginLeft: 'auto' }}
-        >
-          <ExpandMoreIcon
-            sx={{
-              transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.3s ease',
-            }}
-          />
-        </IconButton>
-      </CardActions>
-      {expanded && (
-  <CardContent>
-    {experience.results?.map((result, index) => (
-      <Typography key={index} paragraph>
-        {result}
-      </Typography>
-    ))}
-  </CardContent>
-)}
 
+      {/* <CardActions sx={{ justifyContent: "flex-start" }}>
+        <IconButton>
+          <FavoriteIcon sx={{ color: "white" }} />
+        </IconButton>
+        <IconButton>
+          <ShareIcon sx={{ color: "white" }} />
+        </IconButton>
+      </CardActions> */}
     </Card>
   );
 }
+
 export default function ExperienceCardsList() {
   return (
     <Box sx={{ flexGrow: 1, p: 2 }}>

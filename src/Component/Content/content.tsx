@@ -13,7 +13,9 @@ import About from "../Aboutme/aboutme";
   - Add, delete, and mark tasks as completed ✅
   - Interactive UI with real-time task updates
   - Component-based structure for clean and maintainable code`,
-      // image: "https://raw.githubusercontent.com/Simra2004/todolist-react/main/public/screenshot.png"
+      image: "https://images.pexels.com/photos/1750268/pexels-photo-1750268.jpeg?auto=compress&cs=tinysrgb&w=800",
+      link: "https://github.com/Simra2004/todolist-react"
+      
     },
     {
       title: "Google Homepage Clone",
@@ -21,8 +23,8 @@ import About from "../Aboutme/aboutme";
   - Mimics original layout and styling
   - Fully responsive design
   - Practiced component-based architecture`,
-      // image: "https://raw.githubusercontent.com/Simra2004/Google-homepage-using-react/main/public/google-clone.png"
-
+      image: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=800",
+ link: "https://github.com/Simra2004/Google-homepage-using-react"
     },
     {
       title: "Tic-Tac-Toe Game",
@@ -30,8 +32,8 @@ import About from "../Aboutme/aboutme";
   - Two-player mode with alternating turns
   - Win/draw detection and game reset
   - Styled using CSS for a smooth UI`,
-  // image: "https://raw.githubusercontent.com/Simra2004/TicTacToe-react/main/public/tictactoe.png"
-
+  image: "https://images.pexels.com/photos/28454507/pexels-photo-28454507/free-photo-of-tic-tac-toe-game-on-black-surface.jpeg?auto=compress&cs=tinysrgb&w=800",
+ link: "https://github.com/Simra2004/TicTacToe-react"
     },
     {
       title: "Expense Tracker",
@@ -39,7 +41,8 @@ import About from "../Aboutme/aboutme";
 - Add, view, and categorize expenses 💸
 - Visual summary of total balance, income, and expenses
 - State managed using React hooks`,
-// image: "https://raw.githubusercontent.com/Simra2004/expense-tracker/main/public/expense-tracker.png"
+image: "https://images.pexels.com/photos/16282306/pexels-photo-16282306/free-photo-of-a-person-using-a-calculator.jpeg?auto=compress&cs=tinysrgb&w=800",
+ link: "https://github.com/Simra2004/expense-tracker"
 },
     {
       title: "Book Genre Prediction",
@@ -47,7 +50,8 @@ import About from "../Aboutme/aboutme";
   - Utilized Python with scikit-learn and pandas
   - Implemented models like Naive Bayes and Logistic Regression
   - Achieved accurate predictions with proper preprocessing and EDA`,
-  // image: "https://raw.githubusercontent.com/Simra2004/BOOK-GENRE-PREDICTION/main/public/book-genre.png"
+  image: "https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=800",
+   link: "https://github.com/Simra2004/BOOK-GENRE-PREDICTION"
     },
     {
       title: "Movie Recommendation System",
@@ -55,7 +59,8 @@ import About from "../Aboutme/aboutme";
     - Utilized TF-IDF Vectorizer to compute content similarity 🎬
     - Recommends movies based on plot and genre
     - Implemented using pandas, scikit-learn, and streamlit for UI`,
-    // image: "https://example.com/movie-recommendation-thumbnail.jpg"
+    image: "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=800",
+     link: "https://github.com/Simra2004/movie-recommendation-system"
   },
     {
       title: "Laboratory Automation System",
@@ -63,7 +68,8 @@ import About from "../Aboutme/aboutme";
     - Handles patient data, test entries, and result generation
     - User-friendly UI to automate lab operations efficiently 🧪
     - Utilized pandas for data handling and Streamlit for interactive UI`,
-      // image: "https://raw.githubusercontent.com/Hania-k11/LaboratorySystem/main/Assets/lab_app_screenshot.png"
+      image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=800",
+       link: "https://github.com/Hania-k11/LaboratorySystem"
     },
     {
       title: "E-commerce Website UI",
@@ -71,7 +77,8 @@ import About from "../Aboutme/aboutme";
     - Features home, product, blog, and cart pages 🛒
     - Fully responsive layout with Bootstrap grid
     - Dynamic interactions using JavaScript (e.g., add to cart, toggle menu)`,
-    // image: "https://raw.githubusercontent.com/Simra2004/E-commerce-website-using-html-css-bootstrap-and-javascript/main/images/hero4.png"
+    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+     link: "https://github.com/Simra2004/E-commerce-website-using-html-css-bootstrap-and-javascript"
   }
     
   ];
@@ -182,6 +189,9 @@ function Content() {
     key={index}
     title={project.title}
     description={project.description}
+    link= {project.link}
+    image= {project.image}
+    // button={project.share}
     // image={project.image}
   />
 ))}
@@ -222,6 +232,7 @@ function Content() {
           className="description"
           marginTop={2}
           fontWeight={600}
+          
         >
           <Box
             sx={{
@@ -229,6 +240,7 @@ function Content() {
               justifyContent: "space-between",
               marginTop: 2,
               fontWeight: 600,
+              
             }}
           >
             <Experience />
