@@ -5,6 +5,8 @@ import List from "../List/list";
 import Card from "../Card/card";
 import Experience from "../Experience/experience";
 import About from "../Aboutme/aboutme";
+import { Chip, Paper } from '@mui/material';
+
 
   const WorkProjects = [
     {
@@ -247,6 +249,61 @@ function Content() {
          
           </Box>
         </Typography>
+        <div id="Skills">
+  <Typography
+    variant="h4"
+    className="title"
+    marginTop={6}
+    marginBottom={3}
+    fontWeight="bold"
+  >
+    SKILLS
+  </Typography>
+  <Paper
+  sx={{
+    padding: 3,
+    backgroundColor: "transparent",  
+    borderRadius: 3,
+    maxWidth: 800,
+    margin: "0 auto",
+  }}
+>
+  <Box
+    sx={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 2,
+      justifyContent: "center",
+      backgroundColor: "transparent", 
+    }}
+  >
+    {[ 
+      "OOPs", "Data Structures", "HTML", "CSS", "JavaScript", "React", "Vite", 
+      "Python", "Machine Learning Algorithms", "Git / GitHub", "Website SEO", 
+      "State Management", "Redux"
+    ].map((skill, index) => (
+      <Chip
+        key={index}
+        label={skill}
+        sx={{
+          fontWeight: "bold",
+          fontSize: "0.9rem",
+          backgroundColor: "#d78edf",
+          color: "black",
+          borderRadius: "8px",
+          padding: "6px 12px",
+          transition: "transform 0.2s ease-in-out",
+          "&:hover": {
+            transform: "scale(1.05)",
+            backgroundColor: "#c77ad4", 
+          },
+        }}
+      />
+    ))}
+  </Box>
+</Paper>
+
+</div>
       </div>
       <div id="Education">
         <Typography
