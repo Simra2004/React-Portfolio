@@ -5,7 +5,9 @@ const navItems = [
   "Work",
   "Experience",
   "Education",
-  "Contactme"
+   "Skills",
+  "Contactme",
+ 
 ];
 const Navbar = () => {
   const handleScroll = (section: string) => {

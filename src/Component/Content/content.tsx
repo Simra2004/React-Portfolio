@@ -1,12 +1,11 @@
 // import React from "react";
 import { Container, Typography, Button, Box } from "@mui/material";
-import "./Content.css";
-import List from "../List/list";
+import List from "../../SharedUI/List/list";
 import Card from "../Card/card";
-import Experience from "../Experience/experience";
-import About from "../Aboutme/aboutme";
+import Experience from "../../SharedUI/Experience/experience";
+import About from "../../SharedUI/Aboutme/aboutme";
 import { Chip, Paper } from '@mui/material';
-
+import Footer from "../../SharedUI/Footer/footer"
 
   const WorkProjects = [
     {
@@ -91,7 +90,7 @@ function Content() {
       <div id="Introduction">
         <Typography
           marginRight={70}
-          marginTop={2}
+          marginTop={5}
           variant="h4"
           fontWeight={"bold"}
           className="title"
@@ -104,7 +103,7 @@ function Content() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            marginTop: 2,
+            marginTop: 1,
           }}
         >
           <Typography
@@ -327,7 +326,6 @@ function Content() {
           </Box>
         </Typography>
       </div>
-      {/* <section id="contact"> */}
       <div id="Contactme">
         <Typography
           variant="h4"
@@ -345,8 +343,11 @@ function Content() {
           fontWeight={600}
         >
           <About />
+          
         </Typography>
+      
       </div>
+      <Footer/>
       {/* </section> */}
     </Container>
   );

@@ -20,7 +20,7 @@ const cards = [
   {
     id: 3,
     title: "LinkedIn",
-    link: "www.linkedin.com/techNmarketing",
+    link: "https://www.linkedin.com/techNmarketing",
   },
 ];
 
@@ -32,7 +32,7 @@ function SelectActionCard() {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        gap: 2
+        gap: 2,
       }}
     >
       {cards.map((card, index) => (
@@ -50,7 +50,10 @@ function SelectActionCard() {
               },
             }}
           >
-            <CardContent sx={{ height: "100%" }}>
+            <CardContent
+              onClick={() => window.open(card.link,"_blank")}
+              sx={{ height: "100%" }}
+            >
               <Typography variant="h5" component="div">
                 {card.title}
               </Typography>
