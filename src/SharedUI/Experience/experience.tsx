@@ -7,10 +7,10 @@ import {
   IconButton,
   Typography,
   Box,
-} from '@mui/material';
-import { Grid } from '@mui/material';
-import { red } from '@mui/material/colors';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+} from "@mui/material";
+import Grid from "@mui/material/Grid";
+import { red } from "@mui/material/colors";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 interface Experience {
   title: string;
   company: string;
@@ -21,7 +21,6 @@ interface Experience {
   contact?: string;
   results?: string[];
 }
-
 
 const Experiences: Experience[] = [
   {
@@ -85,11 +84,11 @@ function ExperienceCard({ experience }: { experience: Experience }) {
     <Card
       sx={{
         maxWidth: 345,
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
         bgcolor: "#1e1e1e",
         color: "white",
         borderRadius: 3,
@@ -103,7 +102,11 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             {experience.title.charAt(0)}
           </Avatar>
         }
-        action={<IconButton><MoreVertIcon sx={{ color: "white" }} /></IconButton>}
+        action={
+          <IconButton>
+            <MoreVertIcon sx={{ color: "white" }} />
+          </IconButton>
+        }
         title={
           <Typography sx={{ fontWeight: "bold", fontSize: "1rem" }}>
             {experience.title}
