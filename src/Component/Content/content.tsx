@@ -159,7 +159,7 @@ function Content() {
           <Button
             variant="contained"
             color="secondary"
-            href="your-resume-link.pdf"
+            href="https://app.enhancv.com/share/bce078f2/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic"
             target="_blank"
             sx={{ padding: 1 }}
           >
