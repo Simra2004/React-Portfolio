@@ -5,7 +5,9 @@ import Card from "../Card/card";
 import Experience from "../../SharedUI/Experience/experience";
 import About from "../../SharedUI/Aboutme/aboutme";
 import { Chip, Paper } from '@mui/material';
-import Footer from "../../SharedUI/Footer/footer"
+import Footer from "../../SharedUI/Footer/footer";
+import { MotionWrapper } from "../../SharedUI/Animation/animation";
+import CardAnimation from "../../SharedUI/Animation/cardanimation";
 
   const WorkProjects = [
     {
@@ -87,6 +89,7 @@ image: "https://images.pexels.com/photos/16282306/pexels-photo-16282306/free-pho
 function Content() {
   return (
     <Container className="content">
+      <MotionWrapper>
       <div id="Introduction">
         <Typography
           marginRight={70}
@@ -165,6 +168,9 @@ function Content() {
           </Button>
         </div>
       </div>
+      </MotionWrapper>
+      <MotionWrapper>
+<CardAnimation>
       <div id="Work">
         <Typography
           marginRight={0}
@@ -192,12 +198,10 @@ function Content() {
     description={project.description}
     link= {project.link}
     image= {project.image}
-    // button={project.share}
-    // image={project.image}
   />
 ))}
         </Box>
-      </div>
+      </div></CardAnimation>
       <div className="buttons">
         <Button
           variant="contained"
@@ -218,6 +222,8 @@ function Content() {
           GitHub
         </Button>
       </div>
+      </MotionWrapper>
+      <MotionWrapper>
       <div id="Experience">
         <Typography
           variant="h4"
@@ -245,9 +251,11 @@ function Content() {
             }}
           >
             <Experience />
-         
+            
           </Box>
         </Typography>
+       
+       <MotionWrapper>
         <div id="Skills">
   <Typography
     variant="h4"
@@ -279,7 +287,7 @@ function Content() {
     {[ 
       "OOPs", "Data Structures", "HTML", "CSS", "JavaScript", "React", "Vite", 
       "Python", "Machine Learning Algorithms", "Git / GitHub", "Website SEO", 
-      "State Management", "Redux"
+      "State Management"
     ].map((skill, index) => (
       <Chip
         key={index}
@@ -302,8 +310,9 @@ function Content() {
   </Box>
 </Paper>
 
-</div>
-      </div>
+</div></MotionWrapper>
+      </div></MotionWrapper>
+      <MotionWrapper>
       <div id="Education">
         <Typography
           variant="h4"
@@ -326,6 +335,8 @@ function Content() {
           </Box>
         </Typography>
       </div>
+      </MotionWrapper>
+      <MotionWrapper>
       <div id="Contactme">
         <Typography
           variant="h4"
@@ -347,8 +358,10 @@ function Content() {
         </Typography>
       
       </div>
+      </MotionWrapper>
+      <CardAnimation>
       <Footer/>
-      {/* </section> */}
+      </CardAnimation>
     </Container>
   );
 }
