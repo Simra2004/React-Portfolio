@@ -6,14 +6,11 @@ import {
   Avatar,
   IconButton,
   Typography,
-  Grid,
   Box,
 } from '@mui/material';
+import { Grid } from '@mui/material';
 import { red } from '@mui/material/colors';
-
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
-
 interface Experience {
   title: string;
   company: string;
