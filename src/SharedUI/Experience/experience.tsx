@@ -10,12 +10,10 @@ import {
   Box,
 } from '@mui/material';
 import { red } from '@mui/material/colors';
-// import FavoriteIcon from '@mui/icons-material/Favorite';
-// import ShareIcon from '@mui/icons-material/Share';
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-// Experience type
+
 interface Experience {
   title: string;
   company: string;
@@ -139,15 +137,6 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           </Typography>
         )}
       </CardContent>
-
-      {/* <CardActions sx={{ justifyContent: "flex-start" }}>
-        <IconButton>
-          <FavoriteIcon sx={{ color: "white" }} />
-        </IconButton>
-        <IconButton>
-          <ShareIcon sx={{ color: "white" }} />
-        </IconButton>
-      </CardActions> */}
     </Card>
   );
 }
